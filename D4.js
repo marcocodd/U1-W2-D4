@@ -117,14 +117,7 @@ const reverseString=function(reverseStr){
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-const upperFirst = function(stringa){
-stringa = stringa.split('')
-for (let i=0; i< stringa.length; i++){
-    stringa[i] = stringa[i].charAt(0).toUpperCase() + stringa[i].slice(0)
-}
-console.log(upperFirst('ciao come'))
-return stringa.join('')
-}
+
 
 
 
@@ -134,10 +127,18 @@ return stringa.join('')
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const giveMeRandom = function(n) {
+    
+    let array =[]
+    for (let i = 0; i < n; i++) {
+        array.push(Math.ceil(Math.random() * 10))
+    }
+    return array
+}
+console.log(giveMeRandom(10))
